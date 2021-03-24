@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 const client = new Discord.Client()
-const bot_token = "ODIzOTQ1ODM3NjIwNjI1NDI4.YFoNWw.38NV6yqW7f1LEMKTEs65ntk4rok"
+const bot_token = ""
 
 console.log("Dicitionary-bot is started")
 console.log("--------------------------")
