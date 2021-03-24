@@ -7,6 +7,7 @@ console.log("--------------------------")
 console.log("")
 
 
+
 client.on("message", (message) => {
     if (message.content.startsWith("!trad")){
         let script = String("https:" + "//www.dizionario-latino.com/dizionario-latino-italiano.php?parola=" + String(message.content.substr(6)))
