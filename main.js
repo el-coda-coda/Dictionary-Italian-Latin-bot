@@ -17,7 +17,7 @@ client.on("message", (message) => {
         let script = String("https:" + "//www.dizionario-latino.com/dizionario-latino-flessione.php?parola=" + String(message.content.substr(5)))
         message.channel.send(script).then(msg => msg.delete({timeout: 150000}))
     }
-    if(message.content.startsWith("!help")){
+    if(message.content ===  "!help"){
         let script = String("Commands are: !trad for translation, !dec for declination")
         message.channel.send(script).then(msg => msg.delete({timeout: 600000})) 
     }
