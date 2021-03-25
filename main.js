@@ -9,6 +9,11 @@ console.log("")
 
 
 client.on("message", (message) => {
+    if (message.content.startsWith("!help")){
+        console.log("help")
+        let script = String("Commands are: !trad for translation, !dec for declination")
+        message.channel.send(script).then(msg => msg.delete({timeout: 300000})) 
+    }
     if (message.content.startsWith("!trad")){
         let script = String("https:" + "//www.dizionario-latino.com/dizionario-latino-italiano.php?parola=" + String(message.content.substr(6)))
         message.channel.send(script).then(msg => msg.delete({timeout: 150000}))
@@ -16,11 +21,6 @@ client.on("message", (message) => {
     if (message.content.startsWith("!dec")){
         let script = String("https:" + "//www.dizionario-latino.com/dizionario-latino-flessione.php?parola=" + String(message.content.substr(5)))
         message.channel.send(script).then(msg => msg.delete({timeout: 150000}))
-    }
-    if(message.content.startsWith("!hel")){
-        console.log("help")
-        let script = String("Commands are: !trad for translation, !dec for declination")
-        message.channel.send(script).then(msg => msg.delete({timeout: 600000})) 
     }
 })
 
