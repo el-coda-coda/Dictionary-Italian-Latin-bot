@@ -18,6 +18,7 @@ client.on("message", (message) => {
         message.channel.send(script).then(msg => msg.delete({timeout: 150000}))
     }
     if(message.content.startsWith("!hel")){
+        console.log("help")
         let script = String("Commands are: !trad for translation, !dec for declination")
         message.channel.send(script).then(msg => msg.delete({timeout: 600000})) 
     }
